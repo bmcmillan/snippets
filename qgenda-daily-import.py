@@ -39,7 +39,9 @@ size = df.size
 cases_created = 0
 for index,row in df.iterrows():
     start = time.time()
-    if row['Location'] not in tasks:
+    if row['Location'] == "":
+        print('Task missing, skipping')
+    else if row['Location'] not in tasks:
         print('Task ' + str(row['Location']) + " was not found")        
     else:
         case = {
