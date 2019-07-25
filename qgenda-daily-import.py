@@ -32,7 +32,7 @@ if rawtasks.status_code != 200:
 tasks = {}
 for task in rawtasks.json():    
     tasks[task['Name']] = task['TaskKey']
-print(tasks.keys())
+#print(tasks.keys())
 
 df = pandas.read_csv('daily.csv', dtype='unicode')
 size = df.size
